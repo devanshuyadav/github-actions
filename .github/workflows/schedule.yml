@@ -1,6 +1,6 @@
 on:
     schedule:
-        - cron: "31 14 * * *"
+        - cron: '32 14 * * *''
 
 jobs:
     hello_world:
