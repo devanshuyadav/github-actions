@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   check-repo:
-    if: github.repository == 'devanshuyadav/github-actions'
+    if: github.repository == 'devanshuyadav/github-actionssss'
     runs-on: ubuntu-latest
     steps:
       - name: 'Secret! Correct repo'
