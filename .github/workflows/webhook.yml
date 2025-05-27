@@ -1,6 +1,6 @@
-name: "Webhook Event"
+name: 'Webhook Event'
 
-on: 
+on:
   repository_dispatch:
     types:
       - webhook
@@ -8,5 +8,8 @@ jobs:
   responding-to-dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a script
-        run: echo "Event of type $GITHUB_EVENT_NAME"
+      - name: Print Event info
+        run: |
+          echo "Event name: $GITHUB_EVENT_NAME"
+          echo "Custom type: ${{ github.event.action }}"
+          echo "Payload key: ${{ github.event.client_payload.key }}"
