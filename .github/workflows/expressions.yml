@@ -13,7 +13,7 @@ jobs:
         if: contains ('Devanshu', 'ansh')
         run: echo "'Devanshu' contains the substring 'ansh'"
 
-      - name: Check if string starts with 
+      - name: Check if string starts with
         if: startsWith('Devanshu', 'Dev')
         run: echo "'Devanshu' starts with 'Dev'"
 
@@ -25,10 +25,10 @@ jobs:
         run: echo ${{ format('Devanshu {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
 
       - name: Convert job context to JSON
-        run: echo "Job context in JSON: ${{ toJSON(github.job) }}"
+        run: 'echo Job context in JSON: ${{ toJSON(github.job) }}'
 
       - name: Parse JSON string
-        run: echo "Parsed JSON: ${{ fromJSON('"hello":"world"').hello }}"
+        run: 'echo Parsed JSON: ${{ fromJSON(''"hello":"world"'').hello }}'
 
       - name: Job succeeded
         if: ${{ success() }}
