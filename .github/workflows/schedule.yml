@@ -3,8 +3,8 @@ on:
     - cron: '*/1 * * * *'
 
 jobs:
-  hello_world:
+  test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo current time
-        run: echo "The current server time is $(date)"
+      - name: Every time
+        run: echo "This step will always run"
