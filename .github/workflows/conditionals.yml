@@ -1,0 +1,17 @@
+name: conditional workflow
+
+on: [push]
+
+jobs:
+  check-repo:
+    runs-on: ubuntu-latest
+    if: github.repository == 'devanshuyadav/github-actions'
+    steps:
+      - name: 'Secret! Correct repo'
+        run: echo repo name - ${{ github.repository }}
+
+  standard-response:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Hi normal audience'
+        run: echo "Good to see you!"
