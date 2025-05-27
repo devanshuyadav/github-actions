@@ -4,11 +4,11 @@ on: [push]
 
 jobs:
   check-repo:
-    runs-on: ubuntu-latest
     if: github.repository == 'devanshuyadav/github-actions'
+    runs-on: ubuntu-latest
     steps:
       - name: 'Secret! Correct repo'
-        run: echo repo name - ${{ github.repository }}
+        run: echo "You're in on a secret!"
 
   standard-response:
     runs-on: ubuntu-latest
